@@ -1,19 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
+ 
 int main(int argc, char *argv[])
 {
-  int i = 0;
-  char str[4];
-  str[0] ='a';
-  str[1] ='b';
-  str[2] ='c';
-  str[4] ='\0';
+  char stc[] = "The worst things to eat before you sleep";
+  char dst[100];
   
-  while(str[i] != 0){      //while문 중괄호 잊지 말기...  
-    printf("str[%i] = %c\n", i, str[i]);
-    i++;
-    }
+  strcpy(dst, stc);   //앞에 반환값 받는 변수 설정 안해도 됨. 
+   
+  printf("copied string : %s\n", dst);
    
   system("PAUSE");	
   return 0;
