@@ -4,9 +4,17 @@
  
 int main(int argc, char *argv[])
 {
-  char str[30] = "happy C programming";
+  char input[100];
+  FILE*fp;
+  fp = fopen("sample.txt", "w");
+  int i;
   
-  printf("문자열\"%s\"의 길이: %i\n", str, strlen(str)); 
+  for(i =0; i <3; i++){
+  printf("input a word:");
+  scanf("%s", input);   //배열에는 & 안씀
+  fprintf(fp, "%s\n", input); }
+  
+  fclose(fp); 
    
   system("PAUSE");	
   return 0;
